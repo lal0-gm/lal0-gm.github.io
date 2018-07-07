@@ -1,0 +1,470 @@
+/* === ICONOS === */
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "untitled-font-1";
+  src:url("fonts/untitled-font-1.eot");
+  src:url("fonts/untitled-font-1.eot?#iefix") format("embedded-opentype"),
+    url("fonts/untitled-font-1.woff") format("woff"),
+    url("fonts/untitled-font-1.ttf") format("truetype"),
+    url("fonts/untitled-font-1.svg#untitled-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "untitled-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "untitled-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bars:before {
+  content: "\61";
+}
+.icon-facebook:before {
+  content: "\62";
+}
+.icon-twitter:before {
+  content: "\63";
+}
+.icon-instagram:before {
+  content: "\64";
+}
+
+
+/* === FUENTES === */
+@font-face {
+  font-family: "fuenteBlack"; 
+  src: url('../fonts/Raleway-Black.ttf');             
+ }
+ 
+ @font-face {
+  font-family: "fuenteRegular"; 
+  src: url('../fonts/Raleway-Regular.ttf');             
+ }
+ 
+ 
+ @font-face {
+  font-family: "fuenteBold"; 
+  src: url('../fonts/Raleway-Bold.ttf');             
+ }
+ 
+ @font-face {
+  font-family: "SemiBold"; 
+  src: url('../fonts/Raleway-Semibold.ttf');             
+ }
+
+
+
+/* === CONFIGURACIÓN DEFAULT === */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'fuenteRegular', sans-serif;
+}
+
+a {
+    font-family: 'SemiBold'
+}
+
+
+header label{
+    cursor: pointer;
+}
+
+.contenedor {
+  margin: auto;
+  width: 100%;
+}
+
+#btn-menu{
+    display: none;
+}
+
+
+
+
+/*--------------------Estilos header--------------------------*/
+
+.header {
+     height: 60px;
+     
+}
+
+.header .contenedor{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.icon-bars{
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 45px;
+    margin-left: auto;
+    cursor: pointer;
+    color: white;
+}
+
+.logo, .icon-bars{
+    margin: 5px;
+    
+}
+
+.nav{
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: all 0.4s;
+    
+}
+
+.menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu_link{
+    display: block;
+    padding: 10px;
+    background: #fff;
+    text-decoration: none;
+    color: black;
+}
+
+.menu_link:hover, .select{
+    background: #2B489F;
+    color: white;
+}
+
+#btn-menu:checked ~ .nav{
+   transform: translateX(0%);
+   transition: all 0.4s;
+}
+
+
+/*--------------------Estilos Banner--------------------------*/
+
+.banner{
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+}
+
+.banner .contenedor{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 70%;
+    margin-top: 17px;
+   
+}
+
+.contenido{
+    margin-top: -30px;
+}
+
+.banner-titulo{
+    margin-top: 40px;
+    color: #2B489F;
+    font-family: "fuenteBlack";
+    text-align: center;
+}
+
+.banner-txt{
+    margin-left: 7px;
+    margin-right: 7px;
+    text-align: justify;
+    font-family: "fuenteRegular";
+}
+
+.btn-CM{
+    text-align: center;
+    margin-top: 35px;
+}
+
+.btn-redondo {
+    background-color: #2B489F; 
+    border: none;
+    color: white;
+    padding: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: "fuenteRegular";
+    box-shadow: 3px 3px 5px #999;
+}
+
+/*--------------------Estilos historia--------------------------*/
+.historia{
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+.seccion-historia{
+    text-align: center;
+    padding: 1px 10px 10px 10px;
+    color: black;
+    margin: 8px;
+	border-radius: 20px 20px 20px 20px;
+	-moz-border-radius: 20px 20px 20px 20px;
+	-webkit-border-radius: 20px 20px 20px 20px;
+	border: 0px solid #000000;
+	background-color: white;
+	box-shadow: 0px 5px 10px #888888;
+}
+
+.historia-titulo{
+    font-family: "fuenteBlack";
+    text-align: center;
+}
+
+.historia-txt{
+    font-family: "fuenteRegular";
+    text-align: justify;
+
+}
+
+/*--------------------Estilos Mision y Vision--------------------------*/
+.mv{
+    
+    margin: 50px;
+   
+    
+}
+
+.mv .contenedor{
+    
+    position: absolute;
+    display: flex;
+    left: 0%;
+    margin-top: 0px;
+    
+    
+}
+
+.mv .cuadro{
+	
+	padding: 10px 1px 0px 0px;
+	color: white;
+	text-align: center;
+	border-radius: 40px 40px 0px 40px;
+	-moz-border-radius: 40px 40px 40px 40px;
+	-webkit-border-radius: 40px 40px 40px 40px;
+	background-color: #4D4D4D;
+    height: 46vh;
+    width: 47vw;
+   
+}
+
+.mision, .vision{
+    margin: 5px;
+    
+}
+
+
+
+
+
+.mv-titulo{
+    font-family: "SemiBold";
+}
+
+.mv-txt{
+    font-family: "fuenteRegular";
+    font-size: 12px;
+}
+
+
+
+
+/*--------------------Estilos Ejes de accion--------------------------*/
+.ejes-accion{
+    background-image: url(/img/ejes_accion.svg);
+    background-repeat: no-repeat;
+    background-position:left top;
+    height: auto;
+   
+    position: absolute;
+    margin-top: 370px;
+}
+
+
+.ejes-accion .contenedor{
+    
+   padding: 0px 30px 0px 30px;    
+   display: block;
+   
+}
+
+
+
+
+.ejes-titulo{
+    
+    font-family: "fuenteBlack";
+    text-align: center;
+}
+
+.ejes-subtitulo{
+    text-align: center;
+    margin-top: 0px;
+}
+
+
+
+.ejes-txt{
+    font-family: "fuenteRegular";
+    font-size: 12px;
+    text-align: center;
+    margin-top: -15px;
+    
+}
+
+
+.ejes-accion .cuadro{
+    padding: 10px 20px 5px 20px;
+	color: white;
+	text-align: center;
+	border-radius: 40px 40px 0px 40px;
+	-moz-border-radius: 40px 40px 40px 40px;
+	-webkit-border-radius: 40px 40px 40px 40px;
+	background-color: #4D4D4D;
+    margin: 20px;
+    height: 18vh;
+
+}
+
+.ejes-accion .contenedor .fondo{
+  
+}
+
+
+/*--------------------Proyectos--------------------------*/
+.proyectos-pasados{
+    margin-top: 425px;
+    background-color: #E3DEDE;
+}
+
+.proyectos-titulo{
+    padding-top: 25px;
+    font-family: "fuenteBlack";
+    text-align: center;
+    
+}
+
+.proyectos-subtitulo{
+    text-align: center;
+    font-family: "SemiBold";
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+ul * {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+.wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+
+
+p {
+    margin: 0 10px;
+}
+
+
+
+ul {
+    margin-top: 0;
+}
+
+span.notes {
+    color: #19afe6;
+}
+
+span.notes span {
+    font-size: 14px;
+    color: #acacad;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+.example {
+    font-size: 22px;
+    
+    overflow: hidden;
+    padding: 0 15px;
+}
+
+.example li {
+    color: #787878;
+}
+
+.example .paused {
+    color: #398db4;
+    font-size: 12px;
+    position: absolute;
+    right: 50%;
+    width: 200px;
+    margin-right: -100px;
+}
+
+/*------------------TEAM MOBILE----------------------------------------------------*/
+
