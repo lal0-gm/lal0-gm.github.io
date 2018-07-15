@@ -430,3 +430,11 @@
 		padding: 4em 3em 2em;
 	}
 }
+
+
+@media(min-width: 970px){
+	.slide__title{
+		font-size: 250%;
+	}
+}
+

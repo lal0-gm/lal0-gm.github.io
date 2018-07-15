@@ -54,6 +54,7 @@
 }
 
 
+
 /* === FUENTES === */
 @font-face {
   font-family: "fuenteBlack"; 
@@ -79,6 +80,9 @@
 
 
 /* === CONFIGURACIÓN DEFAULT === */
+
+html { overflow:hidden; }
+
 * {
   box-sizing: border-box;
 }
@@ -117,8 +121,12 @@ header label{
 /*--------------------Estilos header--------------------------*/
 
 .header {
-     height: 60px;
-     
+    height: 10vh;
+    position: fixed;
+    z-index:1000;
+	top:0;
+	width:100%;
+	
 }
 
 .header .contenedor{
@@ -126,7 +134,21 @@ header label{
     justify-content: space-between;
 }
 
+.tema-nav{
+    background-color: #fff;
+    color: #000;
+}
 
+
+
+.tema-nav .menu_link:hover, .select{
+    background: #2B489F;
+    color: white;
+}
+
+.tema-nav label{
+    color: #000;
+}
 
 .icon-bars{
     display: block;
@@ -138,11 +160,11 @@ header label{
     margin-left: auto;
     cursor: pointer;
     color: white;
+    
 }
 
-.logo, .icon-bars{
-    margin: 5px;
-    
+.icon-bars, .logo{
+    margin: 15px;
 }
 
 .nav{
@@ -158,7 +180,7 @@ header label{
 .menu{
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 8px;
 }
 
 .menu_link{
@@ -180,10 +202,11 @@ header label{
 }
 
 
+
 /*--------------------Estilos Banner--------------------------*/
 
 .banner{
-    margin-top: -60px;
+    margin-top: 0px;
     position: relative;
     z-index: -1000;
 }
@@ -236,6 +259,21 @@ header label{
     box-shadow: 3px 3px 5px #999;
 }
 
+.btn-redondo-team {
+    background-color: #2B489F; 
+    border: none;
+    color: white;
+    padding: 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: "fuenteBlack";
+    box-shadow: 3px 3px 5px #999;
+}
+
 /*--------------------Estilos historia--------------------------*/
 .historia{
     margin-top: 50px;
@@ -255,22 +293,31 @@ header label{
 }
 
 .historia-titulo{
-    font-family: "fuenteBlack";
+    font-family: fuenteBlack;
     text-align: center;
 }
 
 .historia-txt{
-    font-family: "fuenteRegular";
+    font-family: fuenteRegular;
     text-align: justify;
 
 }
 
+
+#morecss-trigger-toggle { cursor: pointer; }
+#morecss-element-toggle { display:none; }
+#morecss-element-toggle:not(:checked) ~ #morecss-toggled-element { display:none; }
+#morecss-element-toggle:not(:checked) ~ #morecss-trigger-toggle .lesslink { display:none; }
+#morecss-element-toggle:checked ~ #morecss-abstract { display:none; }
+#morecss-element-toggle:checked ~ #morecss-trigger-toggle .morelink { display:none; }
+#morecss .morelink, #morecss .lesslink { display: block; cursor: pointer; color:#2196f3; }
+#morecss .morelink:hover, #morecss .lesslink:hover { text-decoration:underline; }
+
+
 /*--------------------Estilos Mision y Vision--------------------------*/
 .mv{
     
-    margin: 50px;
-   
-    
+    margin: 50px 0 0 300px; 
 }
 
 .mv .contenedor{
@@ -292,7 +339,7 @@ header label{
 	-moz-border-radius: 40px 40px 40px 40px;
 	-webkit-border-radius: 40px 40px 40px 40px;
 	background-color: #4D4D4D;
-    height: 46vh;
+    height: 37vh;
     width: 47vw;
    
 }
@@ -307,11 +354,11 @@ header label{
 
 
 .mv-titulo{
-    font-family: "SemiBold";
+    font-family: SemiBold;
 }
 
 .mv-txt{
-    font-family: "fuenteRegular";
+    font-family: fuenteRegular;
     font-size: 12px;
 }
 
@@ -321,41 +368,74 @@ header label{
 /*--------------------Estilos Ejes de accion--------------------------*/
 .ejes-accion{
     background-image: url(/img/ejes_accion.svg);
-    background-repeat: no-repeat;
-    background-position:left top;
-    height: auto;
-   
-    position: absolute;
-    margin-top: 370px;
+    background-position: center center;	  
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 170vh;
+    margin-top: 350px;
+    margin-bottom: 0%;
+    padding: 0%;
 }
 
 
 .ejes-accion .contenedor{
+    position: absolute;
+    display: flex;
+    left: 0%;
+    padding: 0px 0px 0px 0px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
     
-   padding: 0px 30px 0px 30px;    
-   display: block;
-   
 }
 
+.sinergia{
+    width: 45vw; 
+    height: 40vh; 
+    padding-right: 0px; 
+    margin-left: 10px;
 
+}
 
+.educacion{
+    width: 50vw; 
+    height: 40vh; 
+    padding-left: 25px;
+}
+
+.emprendimiento{
+    width: 47vw; 
+    height: 40vh; 
+    padding-left: 10px;
+}
+
+.vinculacion{
+    width: 48vw; 
+    height: 40vh; 
+    padding-left: 15px; 
+    margin-left: 10px;
+}
 
 .ejes-titulo{
     
-    font-family: "fuenteBlack";
+    font-family: fuenteBlack;
     text-align: center;
+    padding-top: 90px;
 }
 
 .ejes-subtitulo{
     text-align: center;
-    margin-top: 0px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #2B489F;
+    font-family: SemiBold;
 }
 
 
 
 .ejes-txt{
-    font-family: "fuenteRegular";
-    font-size: 12px;
+    font-family: fuenteRegular;
+    font-size: 16px;
     text-align: center;
     margin-top: -15px;
     
@@ -363,33 +443,40 @@ header label{
 
 
 .ejes-accion .cuadro{
-    padding: 10px 20px 5px 20px;
-	color: white;
+    padding: 10px 0px 5px 0px;
+	color: #000;
 	text-align: center;
-	border-radius: 40px 40px 0px 40px;
-	-moz-border-radius: 40px 40px 40px 40px;
-	-webkit-border-radius: 40px 40px 40px 40px;
-	background-color: #4D4D4D;
-    margin: 20px;
-    height: 18vh;
-
+	border-radius: 25px 25px 25px 25px;
+	-moz-border-radius: 25px 25px 25px 25px;
+	-webkit-border-radius: 25px 25px 25px 25px;
+	background-color: #fff;
+    height: 30vh;
+    
 }
 
-.ejes-accion .contenedor .fondo{
-  
-}
+
 
 
 /*--------------------Proyectos--------------------------*/
 .proyectos-pasados{
-    margin-top: 425px;
+    margin-top: -445px;
     background-color: #E3DEDE;
 }
 
-.proyectos-titulo{
+.proyectos-pasados-titulo{
     padding-top: 25px;
     font-family: "fuenteBlack";
     text-align: center;
+    color: #fff;
+    
+}
+
+
+.proyectos-actuales-titulo{
+    padding-top: 25px;
+    font-family: "fuenteBlack";
+    text-align: center;
+    color: #2B489F;
     
 }
 
@@ -466,5 +553,1127 @@ section {
     margin-right: -100px;
 }
 
-/*------------------TEAM MOBILE----------------------------------------------------*/
+/*------------------ Prensa---------------------------------------------------*/
+.prensa{
+    background-image: url(/img/fondo-prensa.svg);
+    background-position: center center;	  
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+    height: 87vh;
+}
 
+
+.titulo-prensa{
+    font-family: "fuenteBlack";
+    color: #fff;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+.visum-prensa-img{
+    width: auto;
+    height: 28vh;
+    margin: 10px auto;
+    display: block;
+}
+
+.visum-prensa{
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.pum1{
+   
+    float:left;
+    margin-left: 40px;
+}
+
+.pum2{
+    float: right;
+    margin-right: 40px;
+}
+
+.img-pum{
+    height: 35vh;
+    
+}
+
+
+
+/*--- Contactanos ---*/
+.contactanos{
+    margin: 0px;
+    padding: 0px;
+}
+
+.contactanos p{
+    font-size: 30px;
+}
+
+
+footer{
+    padding: 5px;
+    background-color: #2B489F;
+    height: 16vh;
+    margin-top: 20px;
+}
+
+
+.foot{
+    width: 45vw;
+    float: left;
+    font-family: fuenteRegular;
+    font-size: 10px;
+    color: #fff;
+    margin-top: 10px;
+}
+
+.redes {
+   
+    display: flex;
+    position: relative;
+    
+}
+
+.redes li{
+    list-style: none;
+ 
+}
+
+.redes li a{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 24px;
+    background-color: #fff;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+    margin: 5px;
+}
+
+.redes li a .fab{
+    position: relative;
+    color: #262626;
+    transition: .5s;
+}
+
+.redes li a:hover .fab{
+    color:  #000;
+    transform: rotateY(360deg);
+}
+
+/*---------------Media querys ----------------------*/
+@media(max-width: 320px){
+    .header{
+        height: 12vh;
+    }
+    
+    /*------------------- Mision y Vision --------------------*/
+    .mv .cuadro{
+        height: 43vh;
+    }
+
+    .mv-titulo{
+        margin: 10px;
+    }
+    
+
+    /*------------- Ejes de Accion ------------------*/
+    .ejes-accion{
+        margin-top: 320px;
+        height: 177vh;
+    }
+
+    .ejes-subtitulo{
+        font-size: 18px;
+        margin-top: 8px;
+        margin-bottom: 25px;
+    }
+
+    .ejes-txt{
+        font-size: 14px;
+    }
+
+    .ejes-accion .cuadro{
+        height: 28vh;
+        
+        border-radius: 20px 20px 20px 20px;
+	    -moz-border-radius: 20px 20px 20px 20px;
+	    -webkit-border-radius: 20px 20px 20px 20px;
+    }
+
+    .emprendimiento, .vinculacion{
+        margin-top: -60px;
+    }
+
+    .sinergia, .educacion{
+        margin-top: 20px;
+    }
+
+    .proyectos-pasados{
+        margin-top: -450px;
+    }
+
+
+    /*------ Prensa --------*/
+    .prensa{
+        height: 100vh;
+    }
+
+    /* Footer  */
+    footer{
+        height: 20vh;
+        margin-top: 30px;
+    }
+
+    .foot{
+        font-size: 11px;
+        
+        margin-top: 10px;
+    }
+    
+    
+}
+
+
+@media(min-width: 375px){
+    .mv .cuadro{
+        height: 30vh;
+       
+    }
+
+    .ejes-accion{
+        height: 132vh;
+    }
+
+    .ejes-accion .cuadro{
+        height: 23vh;
+        
+    }
+
+    .proyectos-pasados{
+        margin-top: -460px;
+        
+    }
+
+
+    .prensa{
+        height: 75vh;
+    }
+
+    .visum-prensa-img{
+     
+        height: 22vh;
+     
+        
+    }
+
+    .pum1{
+       
+        
+        margin-left: 25px;
+    }
+    
+    .pum2{
+      
+        margin-right: 25px;
+    }
+    
+    .img-pum{
+        height: 30vh;
+        
+    }
+    
+   
+    
+    footer{
+        height: 16vh;
+    }
+
+    .foot{
+        font-size: 11px;
+    }
+
+  
+
+}
+
+
+@media(min-width: 410px){
+    .mv .cuadro{
+        height: 31vh;
+       
+    }
+
+    .ejes-accion .cuadro{
+        height: 22vh;
+        
+    }
+
+    .proyectos-pasados{
+        margin-top: -386px;
+        
+    }
+    
+}
+
+
+
+
+@media(min-width: 480px){
+
+    .header{
+        height: 17vh;
+    }
+ 
+    .banner .contenedor{
+        margin-top: 60px;
+       
+    }
+
+    /*------------------- Mision y Vision --------------------*/
+    .img-mv{
+    
+        height: 18vh;
+    }
+
+    .mv .cuadro{
+        padding: 20px 10px 10px 10px;
+        width: 30vw;
+        height: 75vh;
+        font-size: 19px;
+    }
+
+    .mision{
+        margin: 0px 50px 0px 100px;
+    }
+
+    .mv-txt{
+        font-size: 13px;
+    }
+
+
+    /*---------------- Ejes de acciob ---------------*/
+    .ejes-accion{
+        height: 300vh;
+       
+    }
+
+    .ejes-accion .cuadro{
+        height: 45vh;
+        
+    }
+
+    .ejes-titulo{
+        margin-top: 50px;
+    }
+    
+
+    .sinergia{
+        width: 36vw; 
+        height: 36vh; 
+        padding-right: 0px; 
+        margin-left: 50px;
+    
+    }
+    
+    .educacion{
+        width: 40vw; 
+        height: 36vh; 
+        padding-left: 25px;
+        margin-left: 50px;
+    }
+    
+    .emprendimiento{
+        width: 37vw; 
+        height: 30vh; 
+        margin-left: 50px;
+    }
+    
+    .vinculacion{
+        width: 38vw; 
+        height: 30vh; 
+        padding-left: 15px; 
+        margin-left: 55px;
+    }
+
+
+    /*---------------- Proyectos pasados ---------------*/
+    .proyectos-pasados{
+        margin-top: -410px;
+        
+    }
+
+    /*---------------- Prensa ---------------*/
+
+    .prensa{
+        height: 175vh;
+    }
+    
+    .visum-prensa-img{
+        height: 60vh;
+        
+    }
+
+    .pum1{
+   
+        margin-left: 120px;
+    }
+    
+    .pum2{
+        margin-right: 120px;
+    }
+    
+
+    .img-pum{
+        height: 70vh;
+        
+    }
+
+    /*--- Footer ------*/
+    footer{
+        margin-top: 50px;
+        height: 25vh;;
+    }
+
+}
+
+@media(min-width: 768px){
+
+    .header {
+        height: 6vh;
+        
+    }
+
+    .banner-responsive{
+        
+        padding-top: 350px;
+       
+    }
+
+    .contenido{
+        margin: -450px 80px 0px 80px; 
+    }
+
+    .banner-titulo, .historia-titulo, .ejes-titulo, .titulo-prensa{
+        font-size: 30px;
+    }
+
+    .historia{
+        margin: -100px 60px 0px 60px; 
+    }
+
+    .mv .cuadro{
+	
+        
+        height: 30vh;
+      
+    }
+
+    .img-mv{
+        height: 7vh;
+    }
+
+    .mv-titulo{
+        font-size: 26px;
+    }
+    
+    .mv-txt{
+        font-size: 15px;
+    }
+
+    .mision{
+        margin-left: 128px;
+    }
+
+
+
+   
+
+    .ejes-accion{
+        height: 100vh;
+       
+    }
+
+    .ejes-accion .cuadro{
+        height: 13vh;
+        
+    }
+
+    
+
+    .sinergia{
+    
+        height: 10vh; 
+        margin-left: 70px;
+    
+    }
+    
+    .educacion{
+        
+        height: 10vh; 
+    
+        
+    }
+    
+    .emprendimiento{
+        
+        height: 10vh; 
+        margin-left: 68px;
+    }
+    
+    .vinculacion{
+    
+        height: 10vh; 
+        
+    }
+
+
+   .prensa{
+       height: 90vh;
+   }
+    
+    .visum-prensa-img{
+        height: 30vh;
+        
+    }
+
+
+    .img-pum{
+        height: 40vh;
+        
+    }
+
+    footer{
+        height: 13vh;
+    }
+
+    .foot{
+        font-size: 16px;
+    }
+
+
+    
+
+
+}
+
+
+
+@media(min-width:970px){
+
+
+    /* ------ Menu ----------  */
+    
+    .header {
+        height: 10vh;
+        
+    }
+    
+    .nav{
+        
+        margin-top:10px;
+        position:static;
+        top: 45px;
+        left: 100px;
+        width: 28%;
+        padding-left: 115px;
+    }
+
+    .tema-nav a{
+        color: #000;
+    }
+
+    .logo{
+        margin-left: 30px;
+        width: 9vw;
+    }
+
+    .menu{
+        display: flex;
+        margin: 0px;
+    }
+    
+    .menu_link{
+        background: transparent;
+        font-family: SemiBold;
+        font-size: 14px;
+        color: #fff;
+    }
+    
+    .menu_link:hover{
+        background: #2B489F;
+        color: white;
+    }
+    
+    .icon-bars{
+        display: none;
+    }
+    
+
+    /*---------BANNER--------*/
+    .banner-responsive{
+        position: relative;
+        margin-top: -850px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .banner .contenedor{
+        position: relative;
+        top: 0%;
+        left: 70%;
+        width: 200%;
+        margin-top: 50px;
+        
+    }
+
+    .img-banner{
+        height: 100vh;
+    }
+
+    .contenido{
+        position: relative;
+        right: 52%;
+        margin-top: -200px;
+        text-align: left;
+        font-size: 17px;
+            
+     }
+
+     .banner-titulo{
+        text-align: left;
+        font-size: 28px;
+    }
+    
+    .btn-redondo {
+        font-size: 20px;
+    }
+
+
+    /*------------- Historia ------------------*/
+    .historia{
+        margin: -300px 100px 0px 100px;
+       
+    }
+
+    .seccion-historia{
+        padding: 10px 50px 50px 50px;
+    }
+    
+
+    .historia-titulo{
+       font-size: 30px;
+    }
+    
+    .historia-txt{
+        font-size: 18px;
+    
+    }
+
+
+    /* Seccion Mision y Vision*/
+    .mv{
+    
+        margin-top: 120px; 
+    }
+    
+    
+
+    .mision{
+        margin: 0px 100px 0px 200px;
+    }
+
+    .mv .cuadro{
+	
+        padding: 15px 10px 0px 10px;
+        height: 46vh;
+        width: 24vw;
+        font-size: 25px;
+    }
+
+    .img-mv{
+        height: 16vh;
+
+    }
+
+    .mv-titulo{
+        margin: 10px 0px 40px 0px;
+    }
+    
+
+    .mv-txt{
+        margin-top: -20px;
+        font-size: 15px;
+    }
+
+
+    /*----- Ejes de Acción --------*/
+    .ejes-accion{
+        margin-top: 480px;
+        height: 155vh;
+       
+    }
+
+    .ejes-accion .contenedor{
+        margin-top: 50px;
+    }
+
+    .ejes-accion .cuadro{
+        width: 30vw;
+        height: 20vh;
+        
+    }
+
+    .sinergia{
+        width: 36vw; 
+        height: 36vh; 
+        padding-right: 0px; 
+        margin-left: 138px;
+    
+    }
+    
+    .educacion{
+        width: 40vw; 
+        height: 36vh; 
+        padding-left: 25px;
+        margin-left: 50px;
+    }
+    
+    .emprendimiento{
+        width: 37vw; 
+        height: 30vh; 
+        margin-left: 130px;
+    }
+    
+    .vinculacion{
+        width: 38vw; 
+        height: 30vh; 
+        padding-left: 15px; 
+        margin-left: 55px;
+    }
+
+
+    /* Proyectos Pasados */
+    .proyectos-pasados{
+        margin-top: -410px;
+        
+    }
+
+    .proyectos-pasados-titulo, .proyectos-actuales-titulo{
+        padding-top: 30px;
+        font-size: 30px;
+    }
+
+    .proyectos-subtitulo{
+        font-size: 25px;
+    }
+    
+    .btn-redondo-team {
+        font-size: 30px;
+        margin: 40px 0px 50px 0px; 
+    }
+
+    /* ------------ Prensa --------------*/
+    .prensa{
+        margin-top: 55px;
+    }
+
+    /*------- Contactanos ---------*/
+    
+    .contactanos{
+        margin-top: 55px;
+    }
+    .contactanos p{
+        font-size: 30px;
+    }
+
+    /* Footer  */
+    footer{
+        margin-top: 70px;
+        padding: 15px;
+        height: 20vh;
+    }
+    .foot{
+        font-size: 15px;
+        
+    }
+
+    .prensa{
+        height: 135vh;
+    }
+     
+     .visum-prensa-img{
+         height: 42vh;
+         margin-bottom: 60px;
+         margin-top: 80px;
+         
+     }
+
+    .pum1{
+   
+        margin-left: 200px;
+    }
+    
+    .pum2{
+        margin-right: 200px;
+    }
+    
+
+    .img-pum{
+        height: 50vh;
+        
+    }
+ 
+
+}
+
+
+@media(min-width: 1024px){
+
+    .banner-responsive{
+        
+        margin-top: -880px;
+        
+    }
+    .banner .contenido{
+        padding-top: 5%;
+        left: -53%;
+    }
+
+    .historia{
+        margin-top: -350px;
+    }
+
+    .historia{
+        margin-top: -400px;
+    }
+
+
+     /* Seccion Mision y Vision*/
+
+    .mv .cuadro{
+	
+        padding: 15px 10px 0px 10px;
+        height: 45vh;
+        width: 23vw;
+        font-size: 25px;
+    }
+
+    .mision{
+        margin-left: 220px;
+    }
+  
+
+
+    .proyectos-pasados{
+        margin-top: -458px;
+    }
+
+    .pum1{
+   
+        margin-left: 250px;
+    }
+    
+    .pum2{
+        margin-right: 250px;
+    }
+
+    footer{
+        height: 18vh;
+    }
+   
+}
+
+
+@media(min-width: 1145px){
+
+    .menu{
+        margin-left: 65px;
+    }
+ 
+    .banner-responsive{
+        
+        margin-top: -950px;
+        
+    }
+
+    .banner .contenido{
+        margin-top: -20%;
+        left: -55%;
+    }
+
+    
+    .mv .cuadro{
+        height: 42vh;
+        width: 22vw;
+    
+    }
+
+    .mision{
+        margin-left:280px;
+    }
+    
+
+
+ /*----- Ejes de Acción --------*/
+            
+.ejes-accion .cuadro{
+    width: 22vw;
+    height: 19vh;
+}
+
+.sinergia{
+    margin-left: 185px;
+}
+
+.emprendimiento{
+    margin-left: 185px;
+    
+}
+
+
+
+
+
+}
+
+@media(min-width:1200px){
+    .menu{
+        margin-left: 100px;
+    }
+
+    .img-banner{
+        height: 75vh;
+    }
+
+    .banner-responsive{
+        
+        margin-top: -980px;
+        
+    }
+
+    .historia{
+        margin-top: -160px
+    }
+
+    .mision{
+        margin-left: 280px;
+    }
+
+    .sinergia{
+        margin-left: 195px;
+    }
+
+
+    .pum1{
+   
+        margin-left: 330px;
+    }
+    
+    .pum2{
+        margin-right: 330px;
+    }
+
+}
+
+
+
+@media(min-width:1270px){
+   
+    .menu{
+        margin-left: 140px;
+    }
+
+    .banner .contenedor{
+     
+        left: 70%;
+        padding-left: 0px;
+    }
+
+    .img-banner{
+        padding-left: 80px;
+        height: 90vh;
+    }
+
+    .banner .contenido{
+        margin-top: -200px;
+        left: -59%;
+    }
+
+    .banner-responsive{
+        
+        margin-top: -1050px;
+        
+    }
+
+    
+    
+    .mision{
+        margin-left: 290px;
+    }
+
+    .sinergia, .emprendimiento{
+        margin-left: 20 0px
+    }
+    
+
+    
+}
+
+@media(min-width:1420px){
+
+
+    /* ------ Menu ----------  */
+    
+    .header {
+        height: 10vh;
+    
+    }
+
+    .historia-titulo, .ejes-titulo, .proyectos-actuales-titulo, .proyectos-pasados-titulo, .titulo-prensa, .banner-titulo{
+        font-size: 40px;
+    }
+
+    .logo{
+        width: 7vw;
+    }
+    .nav{
+        padding-left: -100px;
+    }
+
+    .menu{
+        margin-left: 280px;
+    }
+
+    .img-banner{
+        height: 80vh;
+    }
+
+    .banner-txt{
+        font-size: 20px;
+    }
+ 
+    
+    .banner-responsive{
+        
+        margin-top: -1220px;
+        
+    }
+
+    
+
+    .banner .contenido{
+        padding-top: 0%;
+        left: -56%;
+    }
+
+    .historia{
+        margin-top: -150px
+    }
+
+    /* Seccion Mision y Vision*/
+
+   
+
+    .mv .cuadro{
+	
+        height: 45vh;
+        width: 20vw;
+        font-size: 30px;
+    }
+
+  
+    .mv-titulo{
+        margin: 10px 0px 40px 0px;
+    }
+    
+    .mision{
+        margin-left: 375px;
+    }
+    .mv-txt{
+        margin-top: -20px;
+        font-size: 18px;
+    }
+
+
+        /*----- Ejes de Acción --------*/
+        .ejes-accion{
+            margin-top: 520px;
+           
+           
+        }
+    
+            /*----- Ejes de Acción --------*/
+    .ejes-accion{
+        margin-top: 480px;
+        height: 165vh;
+       
+    }
+
+    .ejes-titulo{
+        
+        font-size: 40px;
+    }
+
+    .ejes-accion .contenedor{
+        margin-top: 80PX;
+    }
+
+    .ejes-subtitulo{
+        font-size: 22px;
+    }
+
+    .ejes-txt{
+        font-size: 18px;
+    } 
+    
+    .ejes-accion .cuadro{
+        width: 25vw;
+        height: 20vh;
+        
+    }
+
+    .sinergia{
+   
+        margin-left: 250px;
+    
+    }
+    
+    .emprendimiento{
+        margin-left: 245px;
+        margin-top: 80px;
+    }
+    .vinculacion{
+        margin-top: 80px;
+    }
+  
+    .proyectos-pasados{
+        margin-top: -500px;
+    }
+
+    .pum1{
+   
+        margin-left: 450px;
+    }
+    
+    .pum2{
+        margin-right: 450px;
+    }
+    
+
+   
+    footer{
+        height: 18vh;
+    }
+
+}

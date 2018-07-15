@@ -13,6 +13,25 @@
         
         
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        
+        
+        
+        
+        
+        <!--Hojas de estilo para el formulario-->
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/form/animate/animate.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/form/css-hamburgers/hamburgers.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/form/select2/select2.min.css">
+        <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/form/util.css">
+        <link rel="stylesheet" type="text/css" href="css/form/main.css">
+        <!--===============================================================================================-->
+    
+        
+        
 
 
         <!-- General demo styles & header -->
@@ -27,20 +46,20 @@
     <body>
       
       <!-- Header -->
-       <header class="header">
+       <header id="menu" class="header">
            <div class="contenedor">
-               <a href="#page-top" class="logo"><img src="img/logo.svg" width="25%"></a>
+               <a href="#page-top" ><img class="logo" src="img/logo.svg" width="80vw"></a>
                <input type="checkbox" id="btn-menu">
                <label class="icon-bars" for="btn-menu"></label>
                
                <nav class="nav" id="nav">
                    <ul class="menu">
-                       <li class="menu_item"><a class="menu_link select" href="#Inicio">Inicio</a></li>
-                       <li class="menu_item"><a class="menu_link" href="#About">¿Quienes somos? </a></li>
-                       <li class="menu_item"><a class="menu_link" href="#NuestrosProyectos">Nuestros Proyectos </a></li>
-                       <li class="menu_item"><a class="menu_link" href="#Team">Team </a></li>
-                       <li class="menu_item"><a class="menu_link" href="#Prensa">Prensa </a></li>
-                       <li class="menu_item"><a class="menu_link" href="#Contacto">Contacto </a></li>
+                       <li class="menu_item"><a data-scroll onclick="Ocultar()" class="menu_link" href="#Inicio">Inicio</a></li>
+                       <li class="menu_item"><a data-scroll onclick="Ocultar()" class="menu_link" href="#About">¿Quienes somos? </a></li>
+                       <li class="menu_item"><a data-scroll onclick="Ocultar()" class="menu_link" href="#NuestrosProyectos">Nuestros Proyectos </a></li>
+                       <li class="menu_item"><a data-scroll onclick="Ocultar()" class="menu_link" href="#Team">Team </a></li>
+                       <li class="menu_item"><a  onclick="Ocultar()" class="menu_link" href="#Prensa">Prensa </a></li>
+                       <li class="menu_item"><a  onclick="Ocultar()" class="menu_link" href="#Contacto">Contacto </a></li>
                    </ul>
                </nav>
            </div>
@@ -50,30 +69,34 @@
        <!-- Banner -->
        <div class="banner" id="Inicio">
            <img src="img/fondo-inicio.svg" >
-           <div class="contenedor">
-               <img src="img/cel_banner.svg" >
+           <div class="banner-responsive">
+            <div class="contenedor">
+                <img class="img-banner" src="img/cel_banner.svg" >
+            </div>
+            <div class="contenido">
+                <h3 class="banner-titulo">INNOVANDO LA EDUCACIÓN</h3>
+                <p class="banner-txt">
+                    <strong>UNAM Mobile</strong> es un espacio experimental de tecnologías innovadoras capaces de
+                    transformar y facilitar la vida cotidiana. <br><br>
+                    
+                    Se fomenta la participación constante de diferentes áreas del conocimiento, lo cual 
+                    le ha permitido desarrollar proyectos con dos características esenciales: <strong>valor</strong>
+                    y <strong>autenticidad</strong>
+                </p>
+                <div class="btn-CM">
+                    <a class="btn-redondo" href="">Conoce más</a>
+               </div>
+            </div>
+            
            </div>
-           <div class="contenido">
-               <h3 class="banner-titulo">INNOVANDO LA EDUCACIÓN</h3>
-               <p class="banner-txt">
-                   <strong>UNAM Mobile</strong> es un espacio experimental de tecnologías innovadoras capaces de
-                   transformar y facilitar la vida cotidiana. <br><br>
-                   
-                   Se fomenta la participación constante de diferentes áreas del conocimiento, lo cual 
-                   le ha permitido desarrollar proyectos con dos características esenciales: <strong>valor</strong>
-                   y <strong>autenticidad</strong>
-               </p>
-           </div>
-           <div class="btn-CM">
-                <a class="btn-redondo" href="">Conoce más</a>
-           </div>
+           
        </div>
        <!-- END Bannerr -->
         
        <!-- Historia -->
-       <div class="historia">
+       <div class="historia" id="About">
            <div class="contenedor">
-               <section class="seccion-historia">
+               <section class="seccion-historia wow fadeInUp" id="morecss">
                   <h2 class="historia-titulo">Historia</h2>
                   <p class="historia-txt">
                      El laboratorio se funda por estudiantes de la Facultad de Ingeniería en 2003. En su momento se conocía como “El laboratorio Qualcomm” sin embargo, Alejandro García, le dio identidad bajo el nombre de LADAI (Laboratorio de Desarrollo de Aplicaciones Inalámbricas y Web) con el objetivo de desarrollar aplicaciones para teléfonos celulares, así como plataformas web que fueran capaces de brindar un servicio en específico. <br><br> 
@@ -93,8 +116,9 @@
         
         <!-- Mision y Vision -->
         <div class="mv">
-            <div class="contenedor">
-                <div class="mision">
+           
+            <div class="contenedor ">
+                <div class="mision wow zoomIn">
                    <div class="cuadro">
                        <center>
                            <img class="img-mv" src="img/mision.svg" width="40%">
@@ -106,7 +130,7 @@
                    </div>
                 </div>
                 
-                <div class="vision">
+                <div class="vision wow zoomIn">
                    <div class="cuadro">
                      <center>
                         <img class="img-mv" src="img/vision.svg"  width="50%">
@@ -118,24 +142,24 @@
                    </div>
                 </div>
             </div>
+            
         </div>
         <!-- END Mision y vision -->
         
         
-        <!-- Ejes de accion 
+        <!-- Ejes de accion-->
         <div class="ejes-accion">
             
            <h2 class="ejes-titulo">Ejes de Acción</h2>
-           <img src="img/ejes_accion.svg">
            
-           <div class="contenedor">
+           <div class="contenedor wow bounceIn" >
             
                  
                
 
                     <div class="sinergia">
                         <div class="cuadro">
-                           <h5 class="ejes-subtitulo">Sinergia</h5>
+                           <h3 class="ejes-subtitulo">Sinergia</h3>
                             <p class="ejes-txt">
                                 Conformar diferentes grupos especializados para desarrollar proyectos multidisciplinarios.
                             </p>
@@ -147,21 +171,21 @@
                      
                     <div class="educacion">
                         <div class="cuadro">
-                            <h5 class="ejes-subtitulo">Educación</h5>
+                            <h3 class="ejes-subtitulo">Educación</h3>
                             <p class="ejes-txt">
                                 Promover el desarrollo académico y profesional de los miembros.
                             </p>
                         </div>
                     </div>
                     
-                
-                
-                
-                
-
-                    <div class="emprendimiento">
+            </div>
+            
+            
+            <div class="contenedor wow bounceIn" style="margin-top: 250px">
+               
+                <div class="emprendimiento">
                         <div class="cuadro">
-                            <h5 class="ejes-subtitulo">Emprendimiento</h5>
+                            <h3 class="ejes-subtitulo">Emprendimiento</h3>
                             <p class="ejes-txt">
                                 Impulsar el talento creativo e innovador para la creación de proyectos.
                             </p>
@@ -170,29 +194,28 @@
 
                     <div class="vinculacion">
                         <div class="cuadro">
-                            <h5 class="ejes-subtitulo">Vinculación</h5>
+                            <h3 class="ejes-subtitulo">Vinculación</h3>
                             <p class="ejes-txt">
                                 Crear alianzas con diferentes organizaciones a nivel nacional e internacional
                             </p>
                         </div>
                     </div>
-                    
-            
                 
             </div>
             
         </div>
         <!--END Ejes de accion -->
                                   
+
         <!--Proyectos pasados -->
         
-        <div class="proyectos-pasados">
+        <div class="proyectos-pasados" id="NuestrosProyectos">
                
-               <h2 class="proyectos-titulo">Proyectos pasados</h2>
+               <h2 class="proyectos-pasados-titulo">Proyectos pasados</h2>
                <!-- Slider start -->
                 <ul class="jc-slider2">
                     <li class="jc-animation">
-                        <img src="img/unam360.png" alt="1">
+                        <center><img src="img/unam360.png"></center>
                         <caption>
                             <p class="proyectos-subtitulo">
                                 UNAM 360
@@ -200,7 +223,7 @@
                         </caption>
                     </li>
                     <li class="jc-animation">
-                        <img src="img/podium.png" alt="2">
+                        <center><img src="img/podium.png" alt="2"></center>
                         <caption>
                             <p class="proyectos-subtitulo">
                                 PODIUM
@@ -208,7 +231,7 @@
                         </caption>
                     </li>
                     <li class="jc-animation">
-                        <img src="img/iusa.png" alt="3" >
+                        <center><img src="img/iusa.png" alt="3" ></center>
                         <caption>
                             <p class="proyectos-subtitulo"> 
                                 IUSA GOL
@@ -225,19 +248,18 @@
         <!--Proyectos Actuales -->
         <div class="proyectos-actuales">
           
-          <h2 class="proyectos-titulo">Proyectos Actuales</h2>
+          <h2 class="proyectos-actuales-titulo">Proyectos Actuales</h2>
        
                 <!-- Slider start -->
                 <ul class="jc-slider4">
                     <li class="jc-animation">
-                        <img src="img/visum.png" alt="1">
-                      
+                       
+                        <center><img src="img/visum.png"></center>   
+                    
                     </li>
+
                     <li class="jc-animation">
-                        <img src="img/misavisos.png" alt="2">
-                        <caption>
-                          
-                        </caption>
+                          <center><img src="img/mis_avisos.png" ></center>   
                     </li>
                     
                 </ul>       
@@ -246,14 +268,14 @@
         <!--END Proyectos ACTUALES-->
                                  
                                  
-                                 
-                                 
-        <!--TEAM MOBILE-->                          
         
-        <div class="container">
+                                 
+        <!--TEAM MOBILE -->                       
+        
+        <div class="container" id="Team">
 		<!-- Blueprint header -->
 		<div style="text-align: center">
-			<a class="btn-redondo">TEAM MOBILE</a>
+			<a class="btn-redondo-team">MOBILE TEAM</a>
 		
 		</div>
 		<!-- Grid -->
@@ -353,21 +375,13 @@
 
 
 
-
-
-
-
-
-
-
-
-		<!-- /slider-->
+		<!-- /slider -->
 
 
 		<section class="content">
 			
 			<div class="content__item" id="content-1">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="Apple Watch Content" />
+				
 				<div class="content__item-inner">
 					<h2>Midori Reyes</h2>
 					<h3>Admistradora de Proyectos</h3>
@@ -382,7 +396,7 @@
 
 
 			<div class="content__item" id="content-2">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="iPad Mini Content" />
+	
 				<div class="content__item-inner">
 					<h2>Irving Eslava</h2>
 					<h3>Desarrollador de Android e IoT</h3>
@@ -396,7 +410,7 @@
 
 
 			<div class="content__item" id="content-3">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="MacBook Content" />
+		
 				<div class="content__item-inner">
 					<h2>Ernesto Gálvez</h2>
 					<h3>Desarrollador de Android e IOS</h3>
@@ -411,7 +425,7 @@
 
 
 			<div class="content__item" id="content-4">
-				<img class="content__item-img rounded-right"  alt="iMac Content" />
+	
 				<div class="content__item-inner">
 					<h2>Eduardo Guzmán</h2>
 					<h3>Desarrollador de IA y <br>	FullStack</h3>
@@ -425,7 +439,7 @@
 
 
 			<div class="content__item" id="content-5">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="Apple Watch Content" />
+		
 				<div class="content__item-inner">
 					<h2>Alex Lara</h2>
 					<h3>Diseñador UX/UI</h3>
@@ -439,7 +453,7 @@
 
 
 			<div class="content__item" id="content-6">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="Apple Watch Content" />
+	
 				<div class="content__item-inner">
 					<h2>Sofía Sánchez</h2>
 					<h3>Diseñadora</h3>
@@ -454,7 +468,7 @@
 
 
 			<div class="content__item" id="content-7">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="Apple Watch Content" />
+
 				<div class="content__item-inner">
 					<h2>Miguel Lopéz</h2>
 					<h3>Desarrollador de Hardware</h3>
@@ -467,7 +481,7 @@
 
 
 			<div class="content__item" id="content-8">
-				<img class="content__item-img rounded-right" src="images/team/cir3.png" alt="Apple Watch Content" />
+			
 				<div class="content__item-inner">
 					<h2>Richi Cambonchi</h2>
 					<h3>Desarrollador de Hardware</h3>
@@ -478,9 +492,90 @@
 				</div>
 			</div>
 
-			<button class="button button--close"><i class="far fa-times-circle"></i><span class="text-hidden">Close content</span></button>
+			<button class="button button--close"><i class="far fa-times-circle"></i><span class="text-hidden">Cerrar</span></button>
 		</section>
 	</div>
+
+        
+        <!--END TEAM MOBILE--> 
+        
+        
+        <!--UNAM MOBILE en Prensa-->
+        <div class="prensa" id="Prensa">
+            <h2 class="titulo-prensa"> UNAM MOBILE en Prensa</h2>
+            <div class="visum-prensa">
+                 <a href="http://www.eluniversal.com.mx/techbit/unam-presenta-lentes-inteligentes"><img class="visum-prensa-img wow fadeInDown" src="img/prensa_visum.png"></a>
+            </div>
+            <div class="pum1">
+               
+                <a href="http://www.eluniversal.com.mx/articulo/techbit/2015/10/30/unam-redisenara-podium-su-chamarra-inteligente"><img src="img/prensa_podium.png" class="img-pum wow fadeInLeft"></a>
+             
+                
+            </div>
+            <div class="pum2">
+                <a href="http://archivo.eluniversal.com.mx/articulos/63745.html"><img src="img/unam360_prensa.png" class="img-pum wow fadeInRight" alt="unam360"></a>
+            </div>
+        </div>
+        <!--END UNAM MOBILE en Prensa-->
+        
+        
+        
+        
+        
+        
+        
+        
+        <!--Contactanos -->
+        <div class="contactanos" id="Contacto">
+        
+            <p class="contact1-form-title">
+                Contactanos
+            </p>
+        
+        
+            <div class="contact1" style="background: #fff">
+                 <div class="container-contact1" style="background-color:#979797; padding-top: 120px">
+                        <div class="contact1-pic js-tilt" data-tilt>
+                            <img src="img/send.svg" alt="IMG">
+                        </div>
+
+                        <form action="enviar.php" method="POST" class="contact1-form validate-form" style="margin-top: -60px">
+                            
+
+                            <div class="wrap-input1 validate-input" data-validate = "Campo requerido">
+                                <input class="input1" type="text" name="name" placeholder="Nombre">
+                                <span class="shadow-input1"></span>
+                            </div>
+
+                            <div class="wrap-input1 validate-input" data-validate = "Ingrese un correo valido: ejemplo@server.xyz">
+                                <input class="input1" type="text" name="email" placeholder="Email">
+                                <span class="shadow-input1"></span>
+                            </div>
+
+                            <div class="wrap-input1 validate-input" data-validate = "Campo requerido">
+                                <input class="input1" type="text" name="subject" placeholder="Asunto">
+                                <span class="shadow-input1"></span>
+                            </div>
+
+                            <div class="wrap-input1 validate-input" data-validate = "Escribe un mensaje">
+                                    <textarea class="input1" name="message" placeholder="Mensaje"></textarea>
+                                <span class="shadow-input1"></span>
+                            </div>
+
+                            <div class="container-contact1-form-btn" >
+                                <button type="submit" class="contact1-form-btn" style="background-color: #2B489F; text-align: center">
+                                    <span>
+                                        Enviar mensaje
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+               </div>
+        
+        </div>
+        <!--END Contactanos-->
+        
 
         
         
@@ -488,6 +583,29 @@
         
         
         
+        <footer>
+            <div style="float: right; margin: 10px;">    
+                <ul class="redes">
+                    <li><a href="https://www.facebook.com/UNAM.Mobile/"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/unam_mobile/"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/unam_mobile"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://www.youtube.com/user/UNAMMOBILEHD"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
+            <div class="foot">
+                <p>
+                    Ing. Alejandro Garcia Romero
+                    <br>
+                <p>
+                <p>
+                    Director de UNAM Mobile y académico de la Facultad de Ingeniería de la UNAM
+                    <br><br>
+                </p>
+                <p>
+                    alejandro@unam.mx
+                <p>
+            </div>
+        </footer>
         
         
         
@@ -499,7 +617,7 @@
         
         
         
-        <!--END TEAM MOBILE--> 
+        
       
                                    
                                     
@@ -508,10 +626,15 @@
        <script type="text/javascript" src="js/menu.js"></script>
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
        
+       <script src="js/form/jquery/jquery-3.2.1.min.js"></script>
+       
        <script src="js/classie.js"></script>
        <script src="js/dynamics.min.js"></script>
        <script src="js/main.js"></script>
        
+        <!-- JS Desplegar historia -->
+        <script src="js/desplegable.js"></script>
+
        <!-- Slider Javascript file -->
         <script src="js/jquery.jcslider.js"></script>
 
@@ -540,8 +663,72 @@
                 });
             });
         </script>
-     
-     
+        
+        
+        <!-- SmoothScroll -->
+        <script src="js/smooth-scroll.js"></script>
+        <script>
+            var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
+        
+        
+        
+        
+        <!-- JS para el form -->
+
+        <!--===============================================================================================-->
+        <script src="js/form/select2/select2.min.js"></script>
+        <!--===============================================================================================-->
+        <script src="js/form/tilt/tilt.jquery.min.js"></script>
+        <script >
+            $('.js-tilt').tilt({
+                scale: 1.1
+            })
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+        <script src="js/wow.min.js"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-23581568-13');
+        </script>
+
+        <!--===============================================================================================-->
+        <script src="js/form/main.js"></script>
+        
+        
+         <!--======== Scripte para el tema de la Navbar =======================================-->
+         <script>
+             $(window).scroll(function(){
+                 if($("#menu").offset().top > 50){
+                     $("#menu").addClass("tema-nav");
+                 }else {
+                     $("#menu").removeClass("tema-nav");
+                 }
+             });
+         </script>
+
+         <!-- **************************Menu**********************-->
+            <script>
+
+                function Ocultar(){
+                    var boton = document.getElementById("btn-menu");
+                    if(boton.checked == true){
+                        boton.checked = false;
+                    }    
+                }
+
+            </script>
+
+        <!-- **************************Menu**********************-->
+            
+        <script>
+            new WOW().init();
+        </script>
         
     </body>
     </html>
